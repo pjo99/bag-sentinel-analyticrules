@@ -1,5 +1,9 @@
 param(
-    [string]$InputVar
+    [string]$resourceGroupName,
+    [string]$workspaceName
 )
 
-Write-Host "Received variable: $InputVar"
+$rules=Get-AzSentinelAlertRule -ResourceGroupName $resourceGroupName -WorkspaceName $workspaceName
+
+
+$rules | Remove-AzSentinelAlertRule
