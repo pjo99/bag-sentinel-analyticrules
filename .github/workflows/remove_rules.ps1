@@ -1,7 +1,8 @@
-param(
-    [string]$resourceGroupName,
-    [string]$workspaceName
-)
+
+
+$ResourceGroupName = $Env:resourceGroupName
+$WorkspaceName = $Env:workspaceName
+
 
 $rules=Get-AzSentinelAlertRule -ResourceGroupName $resourceGroupName -WorkspaceName $workspaceName
 
