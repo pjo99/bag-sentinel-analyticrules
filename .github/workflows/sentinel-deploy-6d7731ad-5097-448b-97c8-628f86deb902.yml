@@ -77,12 +77,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name: Delete all Rules - bag/pjo
-      uses: azure/powershell@v1
-      with:
-        azPSVersion: 'latest'
-        inlineScript: |
-          ${{ github.workspace }}//.github/workflows/remove_rules.ps1
+    # - name: Delete all Rules - bag/pjo
+    #  uses: azure/powershell@v1
+    #  with:
+    #    azPSVersion: 'latest'
+    #    inlineScript: |
+    #      ${{ github.workspace }}//.github/workflows/remove_rules.ps1
 
     - name: Deploy Content to Microsoft Sentinel
       uses: azure/powershell@v1
